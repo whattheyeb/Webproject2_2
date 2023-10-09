@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name = "form1" action="form2_ok.php" onsubmit="return validateForm()" method="post">
+    <fieldset style = "width:250px; margin:10px">
+        <legend>도서 정보 입력</legend>
+        도서명 : <input type = "text" name="bookname"><br>
+        저자 : <input type="text" name="writer"><br>
+        출판사 : <input type="text" name="company"><br>
+        출판년도 : <input type="month" name="bookyear"><br>
+        책 내용 : <textarea name="content" cols="20" rows = '5'></textarea><br>
+    </fieldset>
+            <input type = "submit" vlaue="저장">
+    
+    <script>
+        function validateForm(){
+            var bookname = document.form1.bookname;
+            if(bookname.value == ""){
+                alert("도서명을 입력해주세요.");
+                bookname.focus();
+                return false;
+            }
+            var writer = document.form1.writer.value;
+            if(writer == ""){
+                alert("저자명을 입력해주세요.");
+                subject.focus();
+                return false;
+            }
+            var bookyear = document.form1.bookyear.value;
+            if(bookyear == ""){
+                alert("출판년도를 입력해주세요.");
+                bookyear.focus();
+                return false;
+            }
+            
+        }
+    </script>
+</body>
+</html>
