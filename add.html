@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head><script src="https://getbootstrap.com/docs/5.3/assets/js/color-modes.js"></script>
+    <head>
+        <script src="https://getbootstrap.com/docs/5.3/assets/js/color-modes.js"></script>
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -105,7 +106,7 @@
 <body>
     <fieldset style = "width:300px; margin:30px">
         <div class="col-md-7 col-lg-8">
-        <h4>신규 도서 정보 입력</h4><br>
+        <legend><h4>신규 도서 정보 입력</h4></legend>
         <form name = "form1" action = "form2_ok.php" onsubmit = "return validateForm()" method="post">
           <div class="row g-3">
             <div class="col-sm-6">
@@ -141,11 +142,10 @@
           <hr class="my-4">
           
           <button class="w-100 btn btn-primary btn-lg"> <input type="submit" value="목록에 추가"/> </button>
-
+        </div>
         </form>
     </fieldset>
     
-      </div>
     
            
     
