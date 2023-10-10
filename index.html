@@ -5,61 +5,201 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
+    <style>
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+  
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+  
+        .b-example-divider {
+          width: 100%;
+          height: 3rem;
+          background-color: rgba(0, 0, 0, .1);
+          border: solid rgba(0, 0, 0, .15);
+          border-width: 1px 0;
+          box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+  
+        .b-example-vr {
+          flex-shrink: 0;
+          width: 1.5rem;
+          height: 100vh;
+        }
+  
+        .bi {
+          vertical-align: -.125em;
+          fill: currentColor;
+        }
+  
+        .nav-scroller {
+          position: relative;
+          z-index: 2;
+          height: 2.75rem;
+          overflow-y: hidden;
+        }
+  
+        .nav-scroller .nav {
+          display: flex;
+          flex-wrap: nowrap;
+          padding-bottom: 1rem;
+          margin-top: -1px;
+          overflow-x: auto;
+          text-align: center;
+          white-space: nowrap;
+          -webkit-overflow-scrolling: touch;
+        }
+  
+        .btn-bd-primary {
+          --bd-violet-bg: #712cf9;
+          --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+  
+          --bs-btn-font-weight: 600;
+          --bs-btn-color: var(--bs-white);
+          --bs-btn-bg: var(--bd-violet-bg);
+          --bs-btn-border-color: var(--bd-violet-bg);
+          --bs-btn-hover-color: var(--bs-white);
+          --bs-btn-hover-bg: #6528e0;
+          --bs-btn-hover-border-color: #6528e0;
+          --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+          --bs-btn-active-color: var(--bs-btn-hover-color);
+          --bs-btn-active-bg: #5a23c8;
+          --bs-btn-active-border-color: #5a23c8;
+        }
+  
+        .bd-mode-toggle {
+          z-index: 1500;
+        }
+  
+        .bd-mode-toggle .dropdown-menu .active .bi {
+          display: block !important;
+        }
+
+        button.bookbtn {
+  border: 0;
+  outline: none;
+ 
+  background: rgb(169, 169, 169);
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button.bookbtn:hover {
+  color: white;
+  background: orange;
+}
+
+
+      </style>
 </head>
 <body>
-    <div class = "container">
-        <br>
-        <h1 class = "text-center">10월 도서관리</h1>
-        <br>
-    
+
     <br>
-    <table class="table table-hover table-striped text-center" style="border: 1px solid;">
+    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+    <p><center><h1>10월 도서 목록</h1></center></p>
+</div>
+    <br>
+    <header class="p-3 text-bg-dark">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+
+    
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+              <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+            </form>
+    
+            <div class="text-end">
+              <button type="button" class="btn btn-outline-light me-2">Login</button>
+              <button type="button" class="btn btn-warning">Sign-up</button>
+            </div>
+          </div>
+        </div>
+      </header>
+     
+    <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+    <table class="table table-hover table-striped text-center" style="border: 1px solid black;">
     <thead>
         <tr> 
-            <th>번호</th>
-            <th>도서명</th>
-            <th>저자</th>
-            <th>출판사</th>
-            <th>출판년도</th>
+            <th><center>번호</center></th>
+            <th><center>도서명</center></th>
+            <th><center>저자</center></th>
+            <th><center>출판사</center></th>
+            <th><center>출판년도</center></th>
+            <th><center>*</center></th>
+            <th><center>-</center></th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>1</td>
-            <td>동물농장</td>
+            <td><button class="bookbtn"><a href = "view.html">동물농장</a></button></td>
             <td>조지 오웰</td>
             <td>소담출판사</td>
             <td>2022년 05월</td>
-        </tr>
+            <td><a href='edit.html'> 정보 수정 </a></td>
+            <td><button onclick="javascript:deltebtn()">삭제</button></td>
+\        </tr>
 
         <tr>
             <td>2</td>
-            <td>멋진 신세계</td>
+            <td><button class="bookbtn"><a href = "view.html">멋진 신세계</a></button></td>
             <td>올더스 헉슬리</td>
             <td>소담출판사</td>
             <td>2015년 06월</td>
+            <td><a href='edit.html'> 정보 수정 </a></td>
+            <td><button onclick="javascript:deltebtn()">삭제</button></td>
         </tr>
 
         <tr>
             <td>3</td>
-            <td>데미안</td>
+            <td><button class="bookbtn"><a href = "view.html">데미안</a></button></td>
             <td>헤르만 헤세</td>
             <td>민음사</td>
             <td>2000년 12월</td>
+            <td><a href='edit.html'> 정보 수정 </a></td>
+            <td><button onclick="javascript:deltebtn()">삭제</button></td>
         </tr>
 
         <tr>
             <td>4</td>
-            <td>제인 에어</td>
+            <td><button class="bookbtn"><a href = "view.html">제인 에어</a></button></td>
             <td>샬롯 브론테</td>
             <td>민음사</td>
             <td>2004년 10월</td>
+            <td><a href='edit.html'> 정보 수정 </a></td>
+            <td><button onclick="javascript:deltebtn()">삭제</button></td>
         </tr>
+        
     </tbody>
     </table>
 </div>
-    
+
+
+    <tr>
+        <td colspan="6"><center><button><a href='add.html'>신규 도서 추가</a></button></center></td>
+    </tr>
+</div>
+    <script>
+        function deltebtn(){
+            alert("삭제하겠습니까?");
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
     
