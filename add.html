@@ -8,16 +8,17 @@
 <body>
     <form name = "form1" action="form2_ok.php" onsubmit="return validateForm()" method="post">
     <fieldset style = "width:250px; margin:10px">
-        <legend>도서 정보 입력</legend>
+        <legend>신규 도서 정보 입력</legend>
         도서명 : <input type = "text" name="bookname"><br>
         저자 : <input type="text" name="writer"><br>
         출판사 : <input type="text" name="company"><br>
         출판년도 : <input type="month" name="bookyear"><br>
         책 내용 : <textarea name="content" cols="20" rows = '5'></textarea><br>
     </fieldset>
-            <input type = "submit" vlaue="저장">
+            <button onclick="javascript:click()">도서 추가</button>
     
     <script>
+        
         function validateForm(){
             var bookname = document.form1.bookname;
             if(bookname.value == ""){
@@ -38,6 +39,10 @@
                 return false;
             }
             
+        }
+
+        function click(){
+            alert('게시물이 추가되었습니다.');
         }
     </script>
 </body>
