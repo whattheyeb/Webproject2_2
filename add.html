@@ -160,8 +160,14 @@
             }
             var writer = document.form1.writer.value;
             if(writer == ""){
-                alert("저자명을 입력해주세요.");
+                alert("저자를 입력해주세요.");
                 subject.focus();
+                return false;
+            }
+            var company = document.form1.company.value;
+            if(company == ""){
+                alert("출판사를 입력해주세요.");
+                company.focus();
                 return false;
             }
             var bookyear = document.form1.bookyear.value;

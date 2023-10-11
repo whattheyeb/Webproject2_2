@@ -167,6 +167,12 @@
                 subject.focus();
                 return false;
             }
+            var company = document.form3.company.value;
+            if(company == ""){
+                alert("출판사를 입력해주세요.");
+                company.focus();
+                return false;
+            }
             var bookyear = document.form3.bookyear.value;
             if(bookyear == ""){
                 alert("출판년도를 입력해주세요.");
